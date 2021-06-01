@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Mistakes I made as a software engineer (developer)...</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-light bg-light justify-content-start container-fluid fixed-top ">
+    <div class="container ">
+
+      <button class="d-sm-none navbar-toggler mr-2 " type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <a class="navbar-brand  rounded-lg m-md-0 mr-sm-auto " href="./index.html">
+        <img src="./assets/icons/dev-brands.svg" width="30" height="30" alt="">
+      </a>
+      <form class="form-inline d-none d-md-block mr-lg-auto ml-2">
+        <input class="form-control mr-sm-2 " type="search" placeholder="Search..." aria-label="Search">
+      </form>
+      <div class="ladoDerechoNav d-flex justify-content-end w-48 ml-auto ">
+        <div class="d-flex">
+          <input class="btn btn-primary d-none d-md-block" type="submit" value="Write a post">
+
+          <a class="navbar-brand d-block d-md-none" href="#">
+            <img src="/assets/icons/search-solid.svg" width="24" height="24" alt="">
+          </a>
+
+          <a class="navbar-brand" href="#">
+            <img src="/assets/icons/comment-regular.svg" class="ml-lg-3 ml-md-3" width="24" height="24" alt="">
+          </a>
+
+          <a class="navbar-brand" href="#">
+            <img src="/assets/icons/bell-regular.svg" width="24" height="24" alt="">
+          </a>
+
+          <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><img src="/assets/icons/kodemia.svg" class="rounded-circle"
+              width="30" height="30" alt="Perfil"></a>
+
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#"> <strong>Kodemia</strong><br> @kodemia</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Dashboard</a>
+            <a class="dropdown-item" href="#">Write a Post</a>
+            <a class="dropdown-item" href="#">Reading List</a>
+            <a class="dropdown-item" href="#">Settingss</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sign Out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <aside class=" col-md-1 col-lg-1">
+            <div class="d-md-block p-2 aside-icons">
+              <div class="d-flex justify-content-between flex-md-column align-items-center">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"
+                    class="crayons-icon">
+                    <path
+                      d="M21.179 12.794l.013.014L12 22l-9.192-9.192.013-.014A6.5 6.5 0 0112 3.64a6.5 6.5 0 019.179 9.154zM4.575 5.383a4.5 4.5 0 000 6.364L12 19.172l7.425-7.425a4.5 4.5 0 10-6.364-6.364L8.818 9.626 7.404 8.21l3.162-3.162a4.5 4.5 0 00-5.99.334l-.001.001z">
+                    </path>
+                  </svg>
+                </div>
+
+                <p>38</p>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" aria-hidden="true"
+                    class="crayons-icon">
+                    <path
+                      d="M5.645 8.013c.013-.265-.261-.323-.4-.183-1.16 1.17-1.822 3.865-.344 7.32.294.961 1.938 3.19.84 6.131l-.003.006c-.094.255.206.404.366.263 1.395-1.226 1.933-3.593 1.1-6.375-.488-1.657-1.955-4.226-1.559-7.162zm-3.22 2.738c.05-.137-.124-.417-.326-.225-.939.893-1.316 2.863-.976 4.605.547 2.878 2.374 3.526 2.066 6.629-.028.102.176.38.348.154 1.546-2.033.409-4.453-.241-6.006-1.005-2.386-1.087-4.118-.871-5.157z"
+                      fill="#08090A">
+                    </path>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M13.622 7.223l8.579-3.68c.598-.256 1.087.547.6.985l-6.618 5.941c.881 2.043 2.738 6.34 2.931 6.775 1.348 3.031-2.055 4.918-3.807 3.583a7.027 7.027 0 01-.623-.574c-.974-.965-2.419-2.398-5.207-1.877.284-2.115-.313-3.737-.883-5.288-.38-1.032-.747-2.032-.837-3.124-.346-3.329 3.763-8.23 4.696-7.953.386.115.326 1.229.266 2.319-.051.948-.102 1.88.143 2.12.145.142.428.43.76.773zM11.5 16.5l2.5.5 2.5 2 1-.5-2-4.5-1.5-4-1.5-1-1-1-1-1.5L10 8l-.5 1.5 1 2.5 1 4.5z">
+                    </path>
+                  </svg>
+                </div>
+                <p>38</p>
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"
+                    class="crayons-icon">
+                    <path
+                      d="M5 2h14a1 1 0 011 1v19.143a.5.5 0 01-.766.424L12 18.03l-7.234 4.536A.5.5 0 014 22.143V3a1 1 0 011-1zm13 2H6v15.432l6-3.761 6 3.761V4z">
+                    </path>
+                  </svg>
+                </div>
+                <p>38</p>
+
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" role="img"
+                    aria-labelledby="a99tz15naz8lbl4tcf2unkyo4h49zpqp" class="dropdown-icon crayons-icon">
+                    <title id="a99tz15naz8lbl4tcf2unkyo4h49zpqp">More...</title>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M7 12a2 2 0 11-4 0 2 2 0 014 0zm7 0a2 2 0 11-4 0 2 2 0 014 0zm5 2a2 2 0 100-4 2 2 0 000 4z">
+                    </path>
+                  </svg>
+                </div>
+
+              </div>
+
+            </div>
+          </aside>
+          <main class="col-12 col-md-11 col-lg-7 p-0 mt-md-5">
+            <article class="mt-md-3 post-article">
+              <div class="img-post-center">
+                <img
+                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--YqaOA8Wu--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0wu3mzqv62p75jsr8mks.jpg"
+                  alt="">
+              </div>
+              <div class="pl-3 pr-3 pb-4 pl-md-5 pr-md-5">
+                <h1>Mistakes I made as a software engineer (developer)...</h1>
+                <nav class="post-tags">
+                  <a href="">#webdev</a>
+                  <a href="">#codenewbie</a>
+                  <a href="">#javascript</a>
+                  <a href="">#career</a>
+                </nav>
+                <div class="d-flex flex-wrap align-items-center  user-div">
+                  <div class="d-flex align-items-center">
+                    <div class="avatar-post">
+                      <img
+                        src="https://res.cloudinary.com/practicaldev/image/fetch/s--tjEcwByM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/350031/9de7de32-e1b3-438e-b86e-375c9e85f10b.jpeg"
+                        alt="">
+                    </div>
+
+                    <h4>Ankur Tyagy</h4>
+                  </div>
+
+                  <p>1 may. Originally published at <a href="">theankurtyagi.com</a> ・3 min read</p>
+
+                </div>
+                <div class="comment-large mt-5">
+                  <p class="mb-4">Mistakes I made as a software engineer (developer)...</p>
+                  <p> A Thread... <a href="">pic.twitter.com/xUiF38vhlU</a> </p>
+                  <p>— Ankur💻🎧💪 (@TheAnkurTyagi) <a href="">May 1, 2021</a> </p>
+                </div>
+                <p class="mt-3">It’s okay to screw up — that’s how you learn and grow. But, be sure to learn from past
+                  mistakes.</p>
+                <p class="comment-large">Every software engineer has their own quirks.</p>
+
+                <h2 class="mt-3">I assumed that documentation is not needed.</h2>
+                <p>Biggest mistake ever.</p>
+                <p class="comment-large">Create a Wiki/Confluence page for your project and write down everything.</p>
+                <p class="mt-3">For e.g.</p>
+                <p>If your project requires access to a database, write down the how-to setup on the Wiki page.</p>
+                <p>You’ll be very happy when a new teammate joins and you point them to the Wiki page with everything
+                  written down.</p>
+
+                <h2 class="mt-3">I give up too soon.</h2>
+                <p>We’re all victims of giving up too soon — after all, it’s much easier to just give up.</p>
+                <p>But you know a developer accomplished many impossible things by doing, and not by giving up.</p>
+                <p>This reminds me of a famous quote from Steve Jobs.</p>
+                <p class="comment-large">“I’m convinced that about half of what separates successful entrepreneurs from
+                  the non-successful ones is pure
+                  perseverance.” — Steve Jobs</p>
+                <p class="mt-3">Next time you get a really difficult task, sit back, think, and try to break the
+                  challenge into
+                  smaller
+                  parts.</p>
+
+                <h2 class="mt-3">I say yes to temporary solutions.</h2>
+                <p>I tend to use such a trick just to evade a particular task's complete implementation or to meet up
+                  deadlines.</p>
+                <p class="comment-large">Remember: there is no such thing as a temporary code.</p>
+                <p class="mt-3">Adding code to your application, consider that it can stay there forever.</p>
+
+                <h2 class="mt-3">I assumed code review criteria are good enough.</h2>
+                <p>In the routine everyday development process, it becomes a great challenge to determine how good the
+                  code.</p>
+                <p>Do you support a regular code review or are you limited to the fact that it works as expected?</p>
+
+                <h2 class="mt-3">Ask these questions next time you review a PR.</h2>
+                <div>
+                  <ul>
+                    <li>Is it easy enough to test the resulting code?</li>
+                    <li>Can this code be scaled vertically well?</li>
+                    <li>Is it simple to come up with a name for a certain method or a variable?</li>
+                    <li>How many methods do you need to redefine?</li>
+                  </ul>
+                </div>
+
+                <h2>I assumed complex algorithms always result in a better solution.</h2>
+                <h4>How to avoid this:</h4>
+                <p>I have only one piece of advice to give you, which has worked for me ever since I’ve understood how
+                  the
+                  real world &
+                  tech work.</p>
+                <h4>Start simple.</h4>
+                <h4>There’s no point in complicating things upfront.</h4>
+
+                <h2 class="mt-3">I promote the wrong people.</h2>
+                <p>I assumed a developer is good at their work, they will become good leaders or managers.</p>
+                <p class="comment-large">Not all good developers are great leaders.</p>
+                <p class="mt-3">Managing a team is not easy.</p>
+                <p>It requires proper training to become a coach or mentor.</p>
+                <p>Whether you are a newcomer in the world of development or you just want to become better.</p>
+                <p>Times change, technology may become obsolete but your learning should never stop.</p>
+                <p>The only real mistake is the one from which we learn nothing.</p>
+                <p>~ John Powell</p>
+                <p>That's it for today & Thanks for reading.</p>
+                <p>I have recently written a book for developer growth & shared my 11+ years of experience.</p>
+                <p>If you are serious to grow as a developer.</p>
+                <p>Grab the book now for a weekend offer for just $15 <a href="">The Prime Guide</a> </p>
+                <img src="./assets/img/book.png" alt="">
+                <p>Join 98+ developers who already bought & growing better.</p>
+                <div>
+                  <img src="./assets/img/grafic.jpg" alt="">
+                </div>
+              </div>
+
+            </article>
+            <section class="pl-2 pr-2 pb-3 pl-md-5 pr-md-5 discussion">
+              <div class="d-flex justify-content-between align-items-center mt-3 mb-3 header-discussion">
+                <h2>Discussion (2)</h2>
+                <a class="button" href="">Subscribe</a>
+              </div>
+
+              <div class=" d-flex mb-4 add-comment">
+                <div class="avatar-post">
+                  <img
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--tjEcwByM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/350031/9de7de32-e1b3-438e-b86e-375c9e85f10b.jpeg"
+                    alt="">
+                </div>
+                <textarea class="ml-2" name="add-comment" id="" cols="30" rows="2"
+                  placeholder="Add to the discussion"></textarea>
+              </div>
+              <div class="d-flex mb-3 comment ">
+                <div class=" avatar-post mr-2 mt-2">
+                  <img class="mb-2"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--uwsj8YWC--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/164074/7c455056-929c-4b30-858f-1e359cbbbb93.png"
+                    alt="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                    aria-labelledby="agb0a9ej8talbbirm3a86zh37k8ocv8j" class="crayons-icon expanded">
+                    <path
+                      d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="comment-content">
+                  <div class="comment-text">
+                    <div class="d-flex align-items-center mb-3 header-comment">
+                      <h5 class="mr-2">Aaron Reese</h5>
+                      <p>• May 1</p>
+                    </div>
+
+                    <p>
+                      +1 for great doers != Great managers. Man management is a rare and underrated skill and needs lots
+                      of training and
+                      support, especially in software. Many of us code because we like the consist response and we don't
+                      handle variation and
+                      random results very well
+                    </p>
+
+                  </div>
+                  <div class="d-flex align-items-center mt-2">
+                    <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                        </path>
+                      </svg>
+
+                    </a>
+                    <p>28</p>
+                    <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                    <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                        </path>
+                      </svg>
+
+                    </a>
+                    <p class="d-none d-md-block d-lg-block ml-1">Reply</p>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="d-flex mb-3 comment ">
+                <div class=" avatar-post mr-2 mt-2">
+                  <img class="mb-2"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--wfRc3Rdc--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/184072/3c3e4964-6f88-442b-b936-65f80676a57e.png"
+                    alt="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                    aria-labelledby="agb0a9ej8talbbirm3a86zh37k8ocv8j" class="crayons-icon expanded">
+                    <path
+                      d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="comment-content">
+                  <div class="comment-text">
+                    <div class="d-flex align-items-center mb-3 header-comment">
+                      <h5 class="mr-2">Guilliermo Veron</h5>
+                      <p>• May 2</p>
+                    </div>
+
+                    <p>
+                      Great article. I keep this:
+
+                      Adding code to your application, consider that it can stay there forever.
+
+                      That is so true. Even if you consider a refactor in the future. If the code is not scalable, it
+                      could be hard.
+                    </p>
+
+                  </div>
+                  <div class="d-flex align-items-center mt-2">
+                    <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                        </path>
+                      </svg>
+
+                    </a>
+                    <p>28</p>
+                    <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                    <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                        </path>
+                      </svg>
+
+                    </a>
+                    <p class="d-none d-md-block d-lg-block ml-1">Reply</p>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="d-flex mb-3 comment ">
+                <div class=" avatar-post mr-2 mt-2">
+                  <img class="mb-2"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--JAWqQUtF--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/444740/616b7e59-a732-437f-b6d1-14c5955d9ae7.jpg"
+                    alt="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+                    aria-labelledby="agb0a9ej8talbbirm3a86zh37k8ocv8j" class="crayons-icon expanded">
+                    <path
+                      d="M12 10.677L8 6.935 9 6l3 2.807L15 6l1 .935-4 3.742zm0 4.517L9 18l-1-.935 4-3.742 4 3.742-1 .934-3-2.805z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="comment-content">
+                  <div class="comment-text">
+                    <div class="d-flex align-items-center mb-3 header-comment">
+                      <h5 class="mr-2">VijayVenkataNarayan
+                      </h5>
+                      <p>• May 5</p>
+                    </div>
+
+                    <p>
+                      Nice one.. thanks!
+                    </p>
+
+                  </div>
+                  <div class="d-flex align-items-center mt-2">
+                    <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                        </path>
+                      </svg>
+
+                    </a>
+                    <p>28</p>
+                    <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                    <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                        </path>
+                      </svg>
+
+                    </a>
+                    <p class="d-none d-md-block d-lg-block ml-1">Reply</p>
+
+                  </div>
+                </div>
+
+              </div>
+              <div class="d-flex justify-content-center   footer-discussion">
+                <a class="mr-2" href="">Code of Conduct</a>
+                <a href="">Report abuse</a>
+
+              </div>
+
+
+
+            </section>
+            <section class="mt-3 pt-3 pb-2 pl-2 pr-2 pl-md-5 pr-md-5 read-next">
+              <div class="mb-4 header-read">
+                <h2>Read next</h2>
+              </div>
+              <div class="d-flex align-items-center mb-4 others">
+                <div class=" avatar-post mr-2 mt-2">
+                  <img class="mb-2"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--aOvGj7wf--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/582076/8214038e-a814-4a35-809d-055f930e7360.jpg"
+                    alt="">
+
+                </div>
+                <div>
+                  <h3>How to Update or Insert object into a nested array with Mongo DB</h3>
+                  <p>Dimer BWimBA - Apr 28</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-4 o others">
+                <div class=" avatar-post mr-2 mt-2">
+                  <img class="mb-2"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--xdvHgHR4--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/368238/dd6237f8-0fc7-472c-9114-a06144e75bfc.png"
+                    alt="">
+
+                </div>
+                <div>
+                  <h3>PWA push notification on IOS</h3>
+                  <p>aliafarin - Apr 27</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-4 o others">
+                <div class=" avatar-post mr-2 mt-2">
+                  <img class="mb-2"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--Bw3zSpkt--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/173444/63283185-c7b2-44fe-8986-96b5247e997f.png"
+                    alt="">
+
+                </div>
+                <div>
+                  <h3>Project 64 of 100 - More React Router</h3>
+                  <p>James Hubert - Apr 27</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-4 o others">
+                <div class=" avatar-post mr-2 mt-2">
+                  <img class="mb-2"
+                    src="https://res.cloudinary.com/practicaldev/image/fetch/s--ou7lcc_6--/c_imagga_scale,f_auto,fl_progressive,h_100,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/548251/22020fa7-e943-4436-aa41-2be96f3e7bb9.png"
+                    alt="">
+
+                </div>
+                <div>
+                  <h3>Konow the type of Variable in JS!</h3>
+                  <p>Lenin Felix- Apr 30</p>
+                </div>
+              </div>
+
+
+            </section>
+
+          </main>
+          <aside class="col-12 col-lg-4 p-0 pl-lg-3 mt-5 ">
+            <div class="d-md-none d-lg-block aside-sticky">
+              <section class=" mt-3 info">
+                <div class="header-color">
+
+                </div>
+                <div class="pl-3 pr-3 pb-2">
+                  <div class="d-flex align-items-end post-owner">
+                    <div class="avatar-post mt-3">
+                      <img
+                        src="https://res.cloudinary.com/practicaldev/image/fetch/s--tjEcwByM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/350031/9de7de32-e1b3-438e-b86e-375c9e85f10b.jpeg"
+                        alt="">
+                    </div>
+
+                    <h4 class="ml-2 align-self-end">Ankur Ty</h4>
+                  </div>
+                  <div class="mt-5 mb-3 text-owner">
+                    <p>Software Engineer • Mentor • Author
+                      ▫ Writing at http://TheAnkurTyagi.com
+                      ▫ Talk to me 1-1 👉 hiretheauthor.com/theankurtyagi
+                      ▫ I love to help people grow and share what I learned.</p>
+                  </div>
+
+                  <button class="post-button">Follow</button>
+                  <div class="mt-3 owner-info">
+                    <h3>WORK</h3>
+                    <P>Software Engineer</P>
+
+                    <h3>LOCATION</h3>
+                    <P>Pune</P>
+
+                    <h3>JOINED</h3>
+                    <P>12 de mar. de 2020</P>
+                  </div>
+
+                </div>
+
+              </section>
+              <section class="mt-2 p-3 more-about">
+                <div class="d-flex align-items-center mb-4">
+                  <h3 class="m-0 mr-1">More from</h3>
+                  <a class="name-owner" href="">Ankur Tyagi</a>
+                </div>
+                <div class="mb-3">
+                  <h4>How I Negotiated Job Offers in my Carer...</h4>
+                  <ul class="">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                </div>
+                <div class="mb-3">
+                  <h4>7 uncomfortable truths about being a developer.</h4>
+                  <ul class="">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                </div>
+                <div class="mb-3">
+                  <h4>Learn Deliberate Practice: The 10,000 Hour Rule</h4>
+                  <ul class="">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                </div>
+
+              </section>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="container-fluid   mt-5  mb-lg-0">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mt-5 div-nav">
+            <nav>
+              <ul class="d-flex flex-wrap justify-content-center ">
+                <li><a href="">Home</a></li>
+                <li><a href="">Reading List</a></li>
+                <li><a href="">Listings</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Code of Conduct</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">DEV Shop</a></li>
+                <li><a href="">Sponsors</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of use</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href=""><em>Wite a Post </em></a></li>
+
+              </ul>
+            </nav>
+            <div class="d-flex flex-wrap justify-content-center div-social-media">
+              <a href=""><img src="./assets/icons/twitter.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/facebook.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/git.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/ig.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/twitch.svg" alt=""></a>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center div-text">
+              <p><em>DEV Community</em> – A constructive and inclusive social network for software developers. With you
+                every
+                step of your
+                journey.</p>
+              <p>Built on <em>Forem</em> — the <em>open source</em> software that powers <em>DEV</em> and other
+                inclusive communities.
+
+                Made with love and <em>Ruby on Rails</em> . DEV Community © 2016 - 2021.</p>
+
+            </div>
+            <div class="d-flex justify-content-center mb-4 mb-lg-1">
+              <a class="plant" href=""><img src="./assets/icons/plant.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="mono" alt="Sloan, the sloth mascot" width="52" height="120" loading="lazy"
+      src="https://res.cloudinary.com/practicaldev/image/fetch/s--4RkRuwpj--/c_limit,f_auto,fl_progressive,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/i/wmv3mtusjwb3r13d5h2f.png">
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

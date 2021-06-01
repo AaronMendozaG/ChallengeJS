@@ -1,0 +1,159 @@
+nav{
+    .div-icons-nav{
+        width: 100%;
+    }
+    .dev-ico{
+        svg{
+            path{
+                fill: white;
+            }
+        }
+    }
+    div.avatar-img{
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+    }
+    
+}
+
+.middle-section{
+    .posts-menu{
+        padding: 0 10px;
+        select{
+            padding: 7px 7px;
+            border: 1px solid #b5bdc4;
+            background-color: #f9fafa;
+            border-radius: 5px;
+
+        }
+    }
+   .content-post{
+       box-shadow: 0 0 0 1px rgba(8, 9, 10, 0.1) ;
+       background-color: white;
+    
+    div.avatar-img{
+        border-radius: 100%;
+        height: 30px;
+        width: 30px;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+        }
+    }
+    
+    .post-bottom{
+        ul.ul-post {
+            padding: 0;
+            a{
+                font-size: 0.875rem;
+                color: #64707d;
+            }
+        }
+    }
+    small{
+        color: #64707d;
+    }
+    .post-button{
+        background-color: #d2d6db;
+        color: #363d44;
+        font-size: 0.875rem;
+        border-width: 0;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.05);
+        padding: 3px 8px;
+    }
+
+    h1{
+        font-size: 1.20rem;
+        text-align: left;
+    }
+
+   }
+    
+    .card-center-principal{
+        box-shadow: 0 0 0 1px rgba(8, 9, 10, 0.1) ;
+        h3{
+            margin-bottom: 7px;
+        }
+        .content-post{
+            box-shadow: 0 0 0 0;
+            
+    
+        }
+        border-radius: 5px;
+        background-color: white;
+        div.img-post-center{
+            img{
+                width: 100%;
+                
+            }
+            
+            }
+        
+    }
+}
+
+@media screen and (min-width:768px) {
+    .middle-section{
+        .posts-menu{
+            h1{
+                font-weight: bold;
+                font-size: 1.25rem;
+            }
+
+            div {
+                a{
+                    display:inline-block;
+                text-align: center;
+                margin-left: 10px;
+                padding: 2px 7px;
+                border-radius: 4px 4px 2px 2px;
+                }
+                
+                a:nth-of-type(1){
+                    border-bottom:3px solid #3b49df;
+
+                }
+                a:hover{
+                    background-color:#3b49df17 ;
+                }
+                
+
+            }
+        }
+        .card-center-principal{
+            .img-post-center{
+                img{
+                    border-radius: 5px 5px 0 0;
+                }
+            
+            }
+            
+            h1{
+                padding-left: 35px;
+                font-size: 1.875rem;
+            }
+        
+            }
+            .content-post{
+                border-radius: 8px;
+                h1{
+                    padding-left: 35px;
+                    font-size: 1.5rem;
+                }
+            .post-bottom{
+                padding-left: 35px;
+            }
+        }
+        
+        
+    }
+    
+}

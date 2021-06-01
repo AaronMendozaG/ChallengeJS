@@ -1,0 +1,52 @@
+footer{
+    
+    em{
+        font-weight: bold;
+        font-style: normal;
+    }
+    background-color: #d2d6db;
+    img.mono{
+        display: none;
+    }
+   
+    .div-nav{
+        ul{
+            padding: 0;
+            li{
+                margin-left: 20px;
+                margin-top: 10px;
+                
+            }
+        }
+        
+    }
+
+    .div-social-media{
+        a{
+            margin-left: 10px;
+        }
+    }
+    
+    .div-text{
+        margin-top: 20px;
+        text-align: center;
+        p{
+            margin-bottom: 10px;
+        }
+    }
+    
+    
+    
+}
+
+@media screen and (min-width:1024px) {
+    footer{
+        position: relative;
+        img.mono{
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 94%;
+        }
+    }
+}

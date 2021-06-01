@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+     box-sizing: border-box;
+  }
+ 
+ body {
+     background-color: #EEF0F1;
+ }
+ ul{
+     list-style: none;
+   
+   }
+ a{
+     text-decoration: none;
+     color:#4d5760;
+     font-size: 1rem;
+     
+   }
+   a:link, a:visited, a:active {
+     text-decoration:none;
+ }
+ button{
+   text-decoration: none;
+ }
+ svg{
+   fill: currentColor;
+ }

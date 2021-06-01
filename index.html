@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>DEV Community 👩‍💻👨‍💻</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light  container-fluid fixed-top ">
+    <div class="container">
+      <div class="d-flex align-content-center justify-content-between div-icons-nav">
+        <div class="d-flex">
+          <div class="mt-1 menu-ham">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+              aria-labelledby="asmzglsv0r7xhxl3z8l8rig70y0k435f" class="crayons-icon">
+              <title id="asmzglsv0r7xhxl3z8l8rig70y0k435f">Navigation menu</title>
+              <path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"></path>
+            </svg>
+          </div>
+
+          <div class="ml-2 dev-ico">
+            <svg width="50" height="40" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="50" height="40" rx="3" style="fill: currentColor;"></rect>
+              <path
+                d="M19.099 23.508c0 1.31-.423 2.388-1.27 3.234-.838.839-1.942 1.258-3.312 1.258h-4.403V12.277h4.492c1.31 0 2.385.423 3.224 1.27.846.838 1.269 1.912 1.269 3.223v6.738zm-2.808 0V16.77c0-.562-.187-.981-.562-1.258-.374-.285-.748-.427-1.122-.427h-1.685v10.107h1.684c.375 0 .75-.138 1.123-.415.375-.285.562-.708.562-1.27zM28.185 28h-5.896c-.562 0-1.03-.187-1.404-.561-.375-.375-.562-.843-.562-1.404V14.243c0-.562.187-1.03.562-1.404.374-.375.842-.562 1.404-.562h5.896v2.808H23.13v3.65h3.088v2.808h-3.088v3.65h5.054V28zm7.12 0c-.936 0-1.684-.655-2.246-1.965l-3.65-13.758h3.089l2.807 10.804 2.808-10.804H41.2l-3.65 13.758C36.99 27.345 36.241 28 35.305 28z">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="d-flex mt-2 justify-content-between">
+          <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+            aria-labelledby="aegrupzool4ev341b5f0fza9w211wh6n" class="crayons-icon">
+            <title id="aegrupzool4ev341b5f0fza9w211wh6n">Search</title>
+            <path
+              d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0111 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 01-1.969 5.617zm-2.006-.742A6.977 6.977 0 0018 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 004.875-1.975l.15-.15z">
+            </path>
+          </svg>
+          <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+            aria-labelledby="a162qdunf3orxzydsvaacs8o2uo1pefd" class="crayons-icon">
+            <title id="a162qdunf3orxzydsvaacs8o2uo1pefd">Connect</title>
+            <path
+              d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10H2l2.929-2.929A9.969 9.969 0 012 12zm4.828 8H12a8 8 0 10-8-8c0 2.152.851 4.165 2.343 5.657l1.414 1.414-.929.929zM8 13h8a4 4 0 11-8 0z">
+            </path>
+          </svg>
+          <svg class="ml-3" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img"
+            aria-labelledby="asv76y0irrxu7k8uwbmvv8ifssbiu0sk" class="crayons-icon">
+            <title id="asv76y0irrxu7k8uwbmvv8ifssbiu0sk">Notifications</title>
+            <path d="M20 17h2v2H2v-2h2v-7a8 8 0 1116 0v7zm-2 0v-7a6 6 0 10-12 0v7h12zm-9 4h6v2H9v-2z"></path>
+          </svg>
+          <div class="avatar-img">
+            <img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--tjEcwByM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/350031/9de7de32-e1b3-438e-b86e-375c9e85f10b.jpeg"
+              alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+  </nav>
+
+
+
+  <main class="container-fluid  ">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <aside class="col-3 d-none d-md-block d-lg-block bg-lg-transparent">
+            <div class="nav-menu">
+              <nav>
+                <ul>
+                  <li><img src="./assets/icons/home.svg" alt=""><a href="">Home</a></li>
+                  <li><img src="./assets/icons/reading.svg" alt=""><a href="">Reading List</a></li>
+                  <li><img src="./assets/icons/listings.svg" alt=""><a href="">Listings</a></li>
+                  <li><img src="./assets/icons/podcast.svg" alt=""><a href="">Podcast</a></li>
+                  <li><img src="./assets/icons/videos.svg" alt=""><a href="">Videos</a></li>
+                  <li><img src="./assets/icons/tags.svg" alt=""><a href="">Tags</a></li>
+                  <li><a href="">More</a></li>
+                </ul>
+              </nav>
+
+            </div>
+
+            <div class="d-flex justify-content-between ">
+              <h2>My Tags</h2><img src="./assets/icons/my-tags.svg" alt="">
+            </div>
+            <div class="tags">
+
+
+              <ul>
+                <li><a href="">#javascrip</a></li>
+                <li><a href="">#python</a></li>
+                <li><a href="">#css</a></li>
+                <li><a href="">#android</a></li>
+                <li><a href="">#typescript</a></li>
+                <li><a href="">#linux</a></li>
+                <li><a href="">#git</a></li>
+                <li><a href="">#ubuntu</a></li>
+                <li><a href="">#dev</a></li>
+                <li><a href="">#Kodemia</a></li>
+                <li><a href="">#django</a></li>
+              </ul>
+
+            </div>
+
+            <img class="img-bottom" src="./assets/img/img-aside.jpg" alt="">
+            <h1>Got DEV Stickers Yet?</h1>
+
+          </aside>
+
+          <section class="col-12 col-md-9 col-lg-6 mt-5 p-0 middle-section">
+            <header class="d-flex justify-content-between align-items-center mb-2  posts-menu">
+              <h1>Posts</h1>
+              <div class="d-none d-md-block">
+                <a href="">Feed</a>
+                <a href="">Week</a>
+                <a href="">Month</a>
+                <a href="">Year</a>
+                <a href="">Infinity</a>
+                <a href="">Latest</a>
+              </div>
+              <select class="d-md-none" name="" id="">
+                <option value="" selected="">Feed</option>
+                <option value="/top/week">Week</option>
+                <option value="/top/month">Month</option>
+                <option value="/top/year">Year</option>
+                <option value="/top/infinity">Infinity</option>
+                <option value="/latest">Latest</option>
+              </select>
+
+
+            </header>
+            <article class="card-center-principal">
+              <div class="img-post-center">
+                <img
+                  src="https://res.cloudinary.com/practicaldev/image/fetch/s--YqaOA8Wu--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/0wu3mzqv62p75jsr8mks.jpg"
+                  alt="">
+              </div>
+              <div class="pl-2 pr-2 pb-2  content-post">
+                <div class="d-flex align-items-center user-information mt-2">
+                  <div class="avatar-img">
+                    <img
+                      src="https://res.cloudinary.com/practicaldev/image/fetch/s--tjEcwByM--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/350031/9de7de32-e1b3-438e-b86e-375c9e85f10b.jpeg"
+                      alt="">
+                  </div>
+                  <div class="d-flex flex-column ml-2 ">
+                    <h3>Ankur Tyagy</h3>
+                    <p>May 1 (17 hours ago)</p>
+                  </div>
+
+                </div>
+                <h1 class="mt-3 ">Mistakes i made as a software enginner (developer)...</h1>
+                <div class="post-bottom">
+                  <ul class="ul-post">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>28</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                      <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>1</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">comment</p>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <small>3 min read</small>
+
+                      <button class="ml-2 post-button">Save</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+
+            </article>
+
+            <article class="mt-2 mt-md-3">
+              <div class="pl-2 pr-2 pb-2 pt-2  content-post">
+                <div class="d-flex align-items-center user-information mt-2">
+                  <div class="avatar-img">
+                    <img
+                      src="https://res.cloudinary.com/practicaldev/image/fetch/s--nducgKJY--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/615539/20ab6f8c-4d7e-4f04-9ffd-e3c7b90eeffc.jpg"
+                      alt="">
+                  </div>
+                  <div class="d-flex flex-column ml-2 ">
+                    <h3>Mystery Code</h3>
+                    <p>May 1 (4 hours ago)</p>
+                  </div>
+
+                </div>
+                <h1 class="mt-3">Side Menu Using HTML and CSS</h1>
+                <div class="post-bottom">
+                  <ul class="ul-post">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>28</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                      <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>1</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">comment</p>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <small>3 min read</small>
+
+                      <button class="ml-2 post-button">Save</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </article>
+            <article class="mt-2 mt-md-3">
+              <div class="pl-2 pr-2 pb-2 pt-2  content-post">
+                <div class="d-flex align-items-center user-information mt-2">
+                  <div class="avatar-img">
+                    <img
+                      src="https://res.cloudinary.com/practicaldev/image/fetch/s--Kaj_shjq--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/34369/e690b472-5767-41cd-8ae7-338f5a740682.JPG"
+                      alt="">
+                  </div>
+                  <div class="d-flex flex-column ml-2 ">
+                    <h3>Avindu Hewa</h3>
+                    <p>May 1 (11 hours ago)</p>
+                  </div>
+
+                </div>
+                <h1 class="mt-3">Exploring Node.js Frameworks</h1>
+                <div class="post-bottom">
+                  <ul class="ul-post">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>28</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                      <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>1</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">comment</p>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <small>3 min read</small>
+
+                      <button class="ml-2 post-button">Save</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </article>
+            <article class="mt-2 mt-md-3">
+              <div class="pl-2 pr-2 pb-2 pt-2  content-post">
+                <div class="d-flex align-items-center user-information mt-2">
+                  <div class="avatar-img">
+                    <img
+                      src="https://res.cloudinary.com/practicaldev/image/fetch/s--kIhfO3Mq--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/553869/30add8f9-78ed-4b70-a744-2218998b0498.jpeg"
+                      alt="">
+                  </div>
+                  <div class="d-flex flex-column ml-2 ">
+                    <h3>Aman Sing</h3>
+                    <p>May 1 (16 hours ago)</p>
+                  </div>
+
+                </div>
+                <h1 class="mt-3">How to use particles.js</h1>
+                <div class="post-bottom">
+                  <ul class="ul-post">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>28</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                      <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>1</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">comment</p>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <small>3 min read</small>
+
+                      <button class="ml-2 post-button">Save</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </article>
+            <article class="mt-2 mt-md-3">
+              <div class="pl-2 pr-2 pb-2 pt-2  content-post">
+                <div class="d-flex align-items-center user-information mt-2">
+                  <div class="avatar-img">
+                    <img
+                      src="https://res.cloudinary.com/practicaldev/image/fetch/s--89NNRALu--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/623201/064e4e7a-741b-47e4-bc06-211a446cfe6b.jpeg"
+                      alt="">
+                  </div>
+                  <div class="d-flex flex-column ml-2 ">
+                    <h3>Benjamin Carlson</h3>
+                    <p>May 1 (9 hours ago)</p>
+                  </div>
+
+                </div>
+                <h1 class="mt-3">How To Use The map() Function In Dart</h1>
+                <div class="post-bottom">
+                  <ul class="ul-post">
+                    <l1><a href="">#webdev</a></l1>
+                    <l1><a href="">#codenewbie</a></l1>
+                    <l1><a href="">#javascript</a></l1>
+                    <l1><a href="">#career</a></l1>
+                  </ul>
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <a href=""><svg class="crayons-icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M18.884 12.595l.01.011L12 19.5l-6.894-6.894.01-.01A4.875 4.875 0 0112 5.73a4.875 4.875 0 016.884 6.865zM6.431 7.037a3.375 3.375 0 000 4.773L12 17.38l5.569-5.569a3.375 3.375 0 10-4.773-4.773L9.613 10.22l-1.06-1.062 2.371-2.372a3.375 3.375 0 00-4.492.25v.001z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>28</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">reactions</p>
+                      <a class="ml-4" href=""><svg class="crayons-icon fill" width="24" height="24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.5 5h3a6 6 0 110 12v2.625c-3.75-1.5-9-3.75-9-8.625a6 6 0 016-6zM12 15.5h1.5a4.501 4.501 0 001.722-8.657A4.5 4.5 0 0013.5 6.5h-3A4.5 4.5 0 006 11c0 2.707 1.846 4.475 6 6.36V15.5z">
+                          </path>
+                        </svg>
+
+                      </a>
+                      <p>1</p>
+                      <p class="d-none d-md-block d-lg-block ml-1">comment</p>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                      <small>3 min read</small>
+
+                      <button class="ml-2 post-button">Save</button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </article>
+
+          </section>
+
+          <aside class="col-lg-3 d-none d-lg-block aside-der">
+            <section class=" listings aside-card">
+              <div class="d-flex justify-content-between title-card">
+                <a href="">
+                  <h2>Listings</h2>
+                </a>
+                <a href="">See all</a>
+              </div>
+
+              <a href="" class="a-block">
+                <h3>
+                  Dublin Maker Festival 2021 Open Call
+                </h3>
+                <p>misc</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  [May 13th] 🌲 Live Streaming Series on JavaScript Plug-in Development! 🌲
+                </h3>
+                <p>events</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Developer Relations - Full-time - Japan
+                </h3>
+                <p>jobs</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  FREE Office Hours in May 🤩
+                </h3>
+                <p>mentors</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Backend Developer looking for remote jobs
+                </h3>
+                <p>forhire</p>
+              </a>
+              <a class="text-center font-weight-bold a-block" href="">Create a Listening</a>
+            </section>
+            <section class="news aside-card">
+              <div class="title-card">
+                <a href="">#News</a>
+              </div>
+              <a href="" class="a-block">
+                <h3>
+                  Redux-Cool Philosophy
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  LINUX KERNEL: Researchers from University of Minnesota had no bad intentions- lift ban
+                </h3>
+                <p>7 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  A guide to measuring Core Web Vitals, Cloudflare Pages, and what's new in Chrome 91 | Front End News
+                  #027
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  One week at globaldatanet as AWS Cloud Engineer - David Edition
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+
+              <a href="" class="a-block">
+                <h3>
+                  echoAR, a cloud platform for 3D apps, becomes a Unity Verified Solutions Partner
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+
+            </section>
+            <section class=" aside-card">
+              <div class="title-card">
+                <a href="">#Help</a>
+
+              </div>
+              <a href="" class="a-block">
+                <h3>
+                  How do I map through data in Airtable?
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Where should I put this?😕
+                </h3>
+                <p>2 comments</p>
+              </a>
+            </section>
+            <section class=" aside-card">
+              <div class="title-card">
+                <a href="">#discuss</a>
+              </div>
+              <a href="" class="a-block">
+                <h3>
+                  What kind of music do you listen to while coding? 🎧
+                </h3>
+                <p>64 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  😴 Laziness isn't real
+                </h3>
+                <p>6 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  GraphQL Hackathon: It's a Wrap
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  8 flags showing it's time to quit my job as a developer
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  What topics do you guys love to read about?
+                </h3>
+                <p>3 comments</p>
+              </a>
+            </section>
+            <section class="aside-card">
+              <div class="title-card">
+                <a href="">#explainlikeimfive</a>
+              </div>
+              <a href="" class="a-block">
+                <h3>
+                  Explain Kubernetes to me like I'm Five
+                </h3>
+                <p>22 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Different types of testing explained
+                </h3>
+                <p>40 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Explain "Smoke Testing" like I'm five
+                </h3>
+                <p>13 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Explain Recursion Like I'm Five
+                </h3>
+                <p>14 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Explain WebSockets like I'm five
+                </h3>
+                <p>19 comments</p>
+              </a>
+            </section>
+            <section class="aside-card">
+              <div class="title-card">
+                <a href="">#challenge</a>
+              </div>
+              <a href="" class="a-block">
+                <h3>
+                  Day 2 of #100daysofcode
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Dart VS C++ !! Its Interesting
+                </h3>
+                <p>1 comment </p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  100 days of code - Day 1
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  30-Day Code Quality Challenge
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+            </section>
+            <section class="aside-card">
+              <div class="title-card">
+                <a href="">#meta</a>
+              </div>
+              <a href="" class="a-block">
+                <h3>
+                  How to Write a good Dev.to post?
+                </h3>
+                <p>15 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Announcing DEV for Android
+                </h3>
+                <p>90 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Escaping backticks in a code block block does not work
+                </h3>
+                <p>2 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Dev.to Writing: Making a Series!
+                </h3>
+                <p>13 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  What is DEV.to? and what it wants to be?
+                </h3>
+                <p>6 comments</p>
+              </a>
+            </section>
+            <section class="aside-card">
+              <div class="title-card">
+                <a href="">#watercooler</a>
+              </div>
+              <a href="" class="a-block">
+                <h3>
+                  What kind of music do you listen to while coding? 🎧
+                </h3>
+                <p>64 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Do your own research 🔍
+                </h3>
+                <p>3 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  Seek ideal solutions by thinking backwards: from the goal to the starting point ⏮
+                </h3>
+                <div class="button-new">New</div>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  What topics do you guys love to read about?
+                </h3>
+                <p>3 comments</p>
+              </a>
+              <a href="" class="a-block">
+                <h3>
+                  5 blogs you shouldn't have missed last week, but did! 📣
+                </h3>
+                <p>18 comments</p>
+              </a>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="container-fluid   mt-5  mb-lg-0">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mt-5 div-nav">
+            <nav>
+              <ul class="d-flex flex-wrap justify-content-center ">
+                <li><a href="">Home</a></li>
+                <li><a href="">Reading List</a></li>
+                <li><a href="">Listings</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="">Tags</a></li>
+                <li><a href="">Code of Conduct</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">DEV Shop</a></li>
+                <li><a href="">Sponsors</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of use</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href=""><em>Wite a Post </em></a></li>
+
+              </ul>
+            </nav>
+            <div class="d-flex flex-wrap justify-content-center div-social-media">
+              <a href=""><img src="./assets/icons/twitter.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/facebook.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/git.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/ig.svg" alt=""></a>
+              <a href=""><img src="./assets/icons/twitch.svg" alt=""></a>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center div-text">
+              <p><em>DEV Community</em> – A constructive and inclusive social network for software developers. With you
+                every
+                step of your
+                journey.</p>
+              <p>Built on <em>Forem</em> — the <em>open source</em> software that powers <em>DEV</em> and other
+                inclusive communities.
+
+                Made with love and <em>Ruby on Rails</em> . DEV Community © 2016 - 2021.</p>
+
+            </div>
+            <div class="d-flex justify-content-center mb-4 mb-lg-1">
+              <a class="plant" href=""><img src="./assets/icons/plant.svg" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="mono" alt="Sloan, the sloth mascot" width="52" height="120" loading="lazy"
+      src="https://res.cloudinary.com/practicaldev/image/fetch/s--4RkRuwpj--/c_limit,f_auto,fl_progressive,q_auto,w_100/https://dev-to-uploads.s3.amazonaws.com/i/wmv3mtusjwb3r13d5h2f.png">
+  </footer>
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+    integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

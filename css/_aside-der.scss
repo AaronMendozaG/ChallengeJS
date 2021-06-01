@@ -1,0 +1,56 @@
+h2{
+    font-weight: bold;
+font-size: 1rem;
+}
+h3{
+    font-size: 1rem;
+    color: #202428;
+}
+p{
+    font-size: 0.875rem;
+    color: #64707d;
+    margin: 0 0;
+}
+.button-new{
+
+    background-color: #3b49df;
+    border-radius: 5px;
+    width:35px;
+    color: white;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 10px;
+
+}
+
+.aside-card{
+    margin-top: 20px;
+    background-color: #f9fafa;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba(8, 9, 10, 0.1);
+}
+.title-card{
+    padding: 10px 10px;
+    border-bottom: 1px solid #eef0f1;
+    a{
+        font-weight: bold;
+        font-size: 1rem; 
+    }
+}
+
+.a-block{
+   display: none;
+}
+
+a.a-block:hover{
+    background-color: white;
+}
+
+@media screen and (min-width:1024px){
+    .a-block{
+        display: block;
+        padding: 15px 10px;
+        border-bottom: 1px solid #eef0f1;
+    }
+}
+
