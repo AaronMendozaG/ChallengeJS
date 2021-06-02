@@ -67,10 +67,10 @@ let functionCreate = async (post)=>{
     lectura = between(0,120)
     tags = $('#tagsPost').val()
     content = quill.root.innerHTML
-    image = "https://picsum.photos/seed/picsum/200/300"
+    image = $('#formFileLg').val()
     user = {
-        ImagenUsuario: "https://picsum.photos/seed/picsum/200/300",
-        Nombre: 'Pedrito'
+        ImagenUsuario: $('#userImage').val(),
+        Nombre: $('#user').val()
     }
 
     let newPostObj = {
@@ -82,8 +82,12 @@ let functionCreate = async (post)=>{
         urlImage: image,
         Usuario: user
     }
-    functionCreate(newPostObj)
-    alert("Post Publish")
+    if(date !== '' && title !== '' && lectura !== '' && tags !== '' && content !== '' && image !== '' && user.ImagenUsuario !== '' && user.Nombre !== ''){
+        functionCreate(newPostObj)
+        alert("Post Publish")
+    }else{
+        alert('Llene todos los campos')
+    }
   })
 
 $('#btnClose').click(function(){
@@ -120,4 +124,3 @@ if($('#editor').length>0){
       },
     });
 }
-
