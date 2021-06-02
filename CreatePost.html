@@ -30,13 +30,19 @@
   <div class="container mt-3">
     <div class="row">
       <div class="border border-1 shadow-sm p-3 mb-2 bg-body rounded tags col-lg-9 col-sm-12" style="height: 28rem;">
-        <input class="mt-4 btn btn-light" id="formFileLg" type="file" placeholder="Add">
+        <label for="user">Nombre de Usuario</label>
+        <input class="form-control form-control-sm" type="text" id="user">
+        <label for="userImage">Imagen de Perfil</label>
+        <!-- <input type="file" id="userImage"> -->
+        <input class="form-control form-control-sm" type="text" id="userImage" placeholder="Url..."><br>
+        <label for="formFileLg">Imagen del Post</label>
+        <!-- <input class="mt-4" id="formFileLg" type="file"> -->
+        <input class="mt-2 form-control form-control-sm" id="formFileLg" type="text" placeholder="Url...">
         <input class="mt-4 form-control form-control-lg" type="text" id="titlePost" placeholder="New post title here..."
           aria-label=".form-control-lg example">
-        <input class="mt-4 form-control form-control-sm" id="tagsPost" type="text" placeholder="Add up to 4 tags..."
-          aria-label=".form-control-sm example">
+        <input class="mt-4 mb-4 form-control form-control-md" id="tagsPost" type="text"
+          placeholder="Add up to 4 tags..." aria-label=".form-control-sm example">
         <div class="body">
-          <input class="mt-4 mb-4 form-control form-control-sm" id="formFileSm" type="file">
           <div id="editor"></div>
         </div>
       </div>

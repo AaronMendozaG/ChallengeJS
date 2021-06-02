@@ -16,12 +16,57 @@ let functionCreate = async (post)=>{
 
   // crear usuario
   $('#btnPublish').click(function(){
+    let dataDate = new Date()
+    let datePost = dataDate.getDate()
+    let dateMonth = ''
+    switch (dataDate.getMonth()+1) {
+        case 1:
+            dateMonth = 'Enero'
+            break;
+        case 2:
+            dateMonth = 'Febrero'
+            break;
+        case 3:
+            dateMonth = 'Marzo'
+            break;
+        case 4:
+            dateMonth = 'Abril'
+            break;
+        case 5:
+            dateMonth = 'Mayo'
+            break;
+        case 6:
+            dateMonth = 'Junio'
+            break;
+        case 7:
+            dateMonth = 'Julio'
+            break;
+        case 8:
+            dateMonth = 'Agosto'
+            break;
+        case 9:
+            dateMonth = 'Septiembre'
+            break;
+        case 10:
+            dateMonth = 'Octubre'
+            break;
+        case 11:
+            dateMonth = 'Noviembre'
+            break;
+        case 12:
+            dateMonth = 'Diciembre'
+            break;
+    } 
+        
 
-    date = new Date()
+    date = `${datePost} de ${dateMonth}`
+
+    // date = new Date().toISOString().split('T')[0]
+
     title = $('#titlePost').val()
     lectura = between(0,120)
     tags = $('#tagsPost').val()
-    content = $('#editor').val()
+    content = quill.root.innerHTML
     image = "https://picsum.photos/seed/picsum/200/300"
     user = {
         ImagenUsuario: "https://picsum.photos/seed/picsum/200/300",
@@ -67,9 +112,12 @@ var toolbarOptions = [
     ['clean']                                         // remove formatting button
 ];
 
-var quill = new Quill('#editor', {
-  theme: 'snow',
-  modules: {
-      toolbar: toolbarOptions
-  },
-});
+if($('#editor').length>0){
+    var quill = new Quill('#editor', {
+      theme: 'snow',
+      modules: {
+          toolbar: toolbarOptions
+      },
+    });
+}
+
