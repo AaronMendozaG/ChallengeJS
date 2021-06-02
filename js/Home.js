@@ -40,7 +40,7 @@ const printPosts = (obPosts) => {
             <p>${FechaDeCreacion}</p>
           </div>
         </div>                     
-        <h1 class="mt-3 ">   <a href="/ChallengeJS/post.html?idpost=${key}" class="pr-4 ml-3">${titulo}</a></h1>
+        <h1 class="mt-3 ">   <a href="/post.html?idpost=${key}" class="pr-4 ml-3">${titulo}</a></h1>
         <div class="post-bottom">
           <ul class="ul-post post-tags">
                 ${htmltags}
