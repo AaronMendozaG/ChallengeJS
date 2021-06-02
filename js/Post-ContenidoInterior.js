@@ -10,7 +10,7 @@ const printPostFetchjQuery = async () => {
       let {
         titulo,
         Tags,
-        urlImagen,
+        urlImage,
         Usuario: { Nombre, ImagenUsuario },
         minutosDeLectura,
         FechaDeCreacion,
@@ -22,7 +22,7 @@ const printPostFetchjQuery = async () => {
       //LLenadoDinamico
       $(document).prop("title", `${titulo}`);
       $(".post-article .img-post-center").html(
-        ` <img src="${urlImagen}" alt="">`
+        ` <img src="${urlImage}" alt="">`
       );
       $(".post-article .contenido-Post h1").html(`${titulo}`);
       $(".post-article .contenido-Post .avatar-post ").html(`  

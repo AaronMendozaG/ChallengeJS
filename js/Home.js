@@ -7,9 +7,9 @@ const printPosts = (obPosts) => {
     let {
       titulo,
       Tags,
-      urlImagen,
+      urlImage,
       Usuario: { Nombre, ImagenUsuario },
-      minutosDeLectura,
+      MinutosDeLectura,
       FechaDeCreacion,
     } = obPosts[key];
     //Proceso Tags
@@ -19,13 +19,13 @@ const printPosts = (obPosts) => {
       <img src="${ImagenUsuario}" alt="">`);
     //Pintado de Articulos
     Tags.split(",").forEach((tag) => {
-      htmltags += `<li><a href="">#${tag}</a><li>`;
+      htmltags += `<a href="">#${tag}</a>`;
     });
     acc += `
-      <article class="card-center-principal">
+      <article class="mt-2 mt-md-3 card-center-principal">
       <div class="img-post-center">
         <img
-          src="${urlImagen}"
+          src="${urlImage}"
           alt="">
       </div>
       <div class="pl-2 pr-2 pb-2  content-post">
@@ -40,7 +40,7 @@ const printPosts = (obPosts) => {
             <p>${FechaDeCreacion}</p>
           </div>
         </div>                     
-        <h1 class="mt-3 ">   <a href="/post.html?idpost=${key}" class="pr-4 ml-3">${titulo}</a></h1>
+        <h1 class="mt-3 "><a href="/post.html?idpost=${key}" class="pr-4 ml-3 title-post">${titulo}</a></h1>
         <div class="post-bottom">
           <ul class="ul-post post-tags">
                 ${htmltags}
@@ -67,13 +67,14 @@ const printPosts = (obPosts) => {
               <p class="d-none d-md-block d-lg-block ml-1">comment</p>
             </div>
             <div class="d-flex align-items-center">
-              <small>${minutosDeLectura} min read</small>
+              <small>${(MinutosDeLectura)} min read</small>
               <button class="ml-2 post-button">Save</button>
             </div>
           </div>
         </div>
       
       </div>
+      </article>
          `;
   }
   $(".ContenidoDinamico").html(acc);
