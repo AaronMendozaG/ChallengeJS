@@ -59,28 +59,8 @@ const printPostFetchjQuery = async () => {
     console.log(error);
   }
 };
-//impresion de Post
+
+//impresion de Posts
 $(() => {
   printPostFetchjQuery();
 });
-
-// const printKoders = (obKoders) => {
-//     let acc = ''
-
-//     for(key in  obKoders){
-//         let {name, lastname, } = obKoders[key]
-//         acc += `
-//         <li class="list-group-item d-flex justify-content-between">
-//             <p class="pr-4 text-left">${name} ${lastname}</p>
-//             <div class="options__koder">
-//                 <a href="/koder.html?idkoder=${key}" class="pr-4 ml-3 btn  btn-primary">Ver koder</a>
-//                 <a href="#" class="pr-4 ms-2 btn btn-danger deletekoder" data-id="${key}">Eliminar</a>
-//                 <a href="/editkoder.html?idkoder=${key}" class="pr-4 ms-2 btn btn-primary">Editar koder</a>
-//             </div>
-//         </li>
-//         `
-//     }
-
-//     $('.list__koders').html(acc)
-
-// }
