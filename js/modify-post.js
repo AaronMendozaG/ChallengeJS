@@ -113,6 +113,7 @@ $(document).ready(function(){
 
    //putKoderAjaxJquery(idKoder,newKoder)
    modifyPost(idPost,newPostModify)
+   window.location.pathname = "/"
    })
 
    $('#btnClose').click(function(){
@@ -125,9 +126,29 @@ $('#discardChanges').click(function(){
 })
     
     
-    
+$('#tag').click(()=>{
+    $('#tag').tagsInput({
+        minChars: 0,
+        maxChars: null,
+        limit: null,
+        validationPattern: null,
+        unique: true
+    })
+})
 
-    
+$('#imgInput').click(function(){
+    $('#infoArea').html('<p> <strong> </> Imagen del Post</strong> <br> La imagen del Post se mostrara a los Usuarios, piensa en una imagen que describa tu Post.</p>')
+})
 
+
+$('#title').click(function(){
+    $('#infoArea').html(
+        '<strong> </> Escribe un Gran Titulo</strong> <br> Piense en el título de su publicación como una descripción súper corta ¡pero convincente!. Utilice palabras clave cuando sea apropiado para ayudar a garantizar que las personas puedan encontrar su publicación mediante la búsqueda.</p>')
+})
+
+$('#editor').click(function(){
+    $('#infoArea').html(
+        '<strong> </> Editor Basico</strong> <br> Use Markdown para escribir y dar formato a las publicaciones. Puede usar etiquetas Liquid para agregar contenido enriquecido como tweets, videos de YouTube, etc. Además de las imágenes del contenido de la publicación, también puede arrastrar y soltar una imagen de portada.</p>')
+})
 
 })

@@ -58,6 +58,7 @@ let functionCreate = async (post)=>{
             break;
     } 
         
+    
 
     date = `${datePost} de ${dateMonth}`
 
