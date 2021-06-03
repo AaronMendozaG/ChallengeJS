@@ -63,5 +63,8 @@ $(() => {
         deletePost(idPost)
         
     })
+    $('#discardChanges').click(function(){
+        window.location.pathname = `/post.html`
+    })
   });
   
