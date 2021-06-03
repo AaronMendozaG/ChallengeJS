@@ -6,7 +6,6 @@ const printPostFetchjQuery = async () => {
     let Post = await $.get(
       `https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/${idPost}.json`
     );
-    console.log(Post)
     if (Post !== null) {
       let {
         titulo,
@@ -17,9 +16,9 @@ const printPostFetchjQuery = async () => {
         FechaDeCreacion,
         ContenidoPost,
       } = Post;
-      console.log("Manejado como Array", Tags);
+      // console.log("Manejado como Array", Tags);
       Tags = Tags.split(",");
-      console.log(Tags);
+      // console.log(Tags);
       //LLenadoDinamico
       $(document).prop("title", `${titulo}`);
       $(".post-article .img-post-center").html(

@@ -1,13 +1,10 @@
 var quill
+//EXTRAE EL ID DEL POST QUE SE QUIERE EDITAR
+const params = new URLSearchParams(window.location.search)
+let idPost = params.get('idpost')
 
-$(document).ready(function(){
-    // console.log('ready')
-    const params = new URLSearchParams(window.location.search)
-    let idPost = params.get('idpost')
-
-    
-
-    const printPost = async () => {
+//FUNCION PARA IMPRIMIR POST
+const printPost = async () => {
         try {
             let post = await $.get(`https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/${idPost}.json`)
             if (post !== null) {
@@ -23,6 +20,12 @@ $(document).ready(function(){
             console.log(error)
         }
     }
+
+
+    
+$(document).ready(function(){
+    // console.log('ready')
+    
 
     printPost()
     var toolbarOptions = [
@@ -54,18 +57,13 @@ $(document).ready(function(){
         })
     }
 
-    $('.remove').click((e)=>{
-        
-        $('#urlImg').attr("src",'http://via.placeholder.com/640x360')
-       
-    })
+    //BONTON LA IMAGEN DE POST
+    $('.remove').click(()=>{$('#urlImg').attr("src",'http://via.placeholder.com/640x360')})
     
-    $('.change').click((e)=>{
-        
-        $('#imgInput').attr('class','tags-edit mt-3').focus()
-       
-    })
+    //BONTON ABRE EL IMPUT PARA CAMBIAR LA IMAGEN DE POST
+    $('.change').click((e)=>{$('#imgInput').attr('class','tags-edit mt-3').focus()})
 
+    //FUNCION DE EDITAR POST
     async function modifyPost (idPost,newPost){
         try {
     
@@ -84,53 +82,57 @@ $(document).ready(function(){
                     // console.log(xhr)
                 },
             })
-            console.log(post)
             return post
     
         } catch (error) {
             console.log(error)
             console.log(error.message)
         }
-        
-        // console.log(posts,comments,albums)
     }
-    $('#saveChanges').click(()=>{
-        console.log('me estas presionando')
-   let ContenidoPost=$('.ql-editor ').html()
-   let Tags=$('#tag').val()
-   let titulo=$('.title').val()
-   let urlImage=$('#imgInput').val()
-   if (ContenidoPost=='<p> </p>' || Tags == '' || titulo=='') {
-       window.alert('Ingresa todos los datos solicitados' )
-       return
-   }
-   let newPostModify={
-       ContenidoPost:ContenidoPost, 
-       Tags:Tags, 
-       titulo:titulo, 
-       urlImage:urlImage
-   }
 
-   //putKoderAjaxJquery(idKoder,newKoder)
-   modifyPost(idPost,newPostModify)
+    //EVENTO CLICK QUE GUARDA LOS CAMBIOS DE EDICION
+    $('#saveChanges').click(()=>{
+        let ContenidoPost=$('.ql-editor ').html()
+        let Tags=$('#tag').val()
+        let titulo=$('.title').val()
+        let urlImage=$('#imgInput').val()
+
+        //VALIDA CAMPOS VACIOS
+        if (ContenidoPost=='<p> </p>' || Tags == '' || titulo=='' || urlImage == '') {
+            window.alert('Ingresa todos los datos solicitados' )
+            return
+        }
+        //CREA NUEVO OBJETO
+        let newPostModify={
+            ContenidoPost:ContenidoPost, 
+            Tags:Tags, 
+            titulo:titulo, 
+            urlImage:urlImage
+        }
+        //SE LLAMA LA FUNCION DE MODIFICAR
+        modifyPost(idPost,newPostModify)
    })
 
+   
+    //TAGS
    $('#tag').tagsInput({
-    minChars: 0,
-    maxChars: null,
-    limit: null,
-    validationPattern: null,
-    unique: true
-})
+        minChars: 0,
+        maxChars: null,
+        limit: null,
+        validationPattern: null,
+        unique: true
+    })
 
+    //BOTON DE CERRAR REGRESA A HOME
    $('#btnClose').click(function(){
-    alert("You've made changes to your post. Do you want to navigate to leave this page?")
-    window.location.pathname = "/"
-})
+        alert("You've made changes to your post. Do you want to navigate to leave this page?")
+        window.location.pathname = "/"
+    })
 
-$('#discardChanges').click(function(){
-    window.location.pathname = `/post.html`
-})
+    //DESCARTA CAMBIOS Y REGRESA AL POST
+    $('#discardChanges').click(function(){
+        window.location.pathname = `/post.html`
+    })
     
     
     
