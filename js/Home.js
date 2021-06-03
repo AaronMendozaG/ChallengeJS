@@ -2,41 +2,42 @@
 
 const printPosts = (obPosts) => {
   let acc = "";
-
+  let counter = 1 
   for (key in obPosts) {
     let {
       titulo,
       Tags,
       urlImage,
-      Usuario: { Nombre, ImagenUsuario },
+      Usuario,
       MinutosDeLectura,
       FechaDeCreacion,
     } = obPosts[key];
     //Proceso Tags
     htmltags = "";
     //Cambio de Imagen Dinamico
-    $(".Img-PersonaLogeada").html(`  
-      <img src="${ImagenUsuario}" alt="">`);
+    // $(".Img-PersonaLogeada").html(`  
+    //   <img src="${Usuario.ImagenUsuario}" alt="">`);
     //Pintado de Articulos
     Tags.split(",").forEach((tag) => {
       htmltags += `<a href="">#${tag}</a>`;
     });
+    let imgPost = counter == 1 ? `<div class="img-post-center">
+    <img
+      src="${urlImage}"
+      alt="">
+  </div>` : ''
     acc += `
       <article class="mt-2 mt-md-3 card-center-principal">
-      <div class="img-post-center">
-        <img
-          src="${urlImage}"
-          alt="">
-      </div>
+      ${imgPost}
       <div class="pl-2 pr-2 pb-2  content-post">
         <div class="d-flex align-items-center user-information mt-2">
           <div class="avatar-img">
             <img
-              src="${ImagenUsuario}"
+              src="${Usuario.ImagenUsuario}"
               alt="">
           </div>
           <div class="d-flex flex-column ml-2 ">
-            <h3>${Nombre}</h3>
+            <h3>${Usuario.Nombre}</h3>
             <p>${FechaDeCreacion}</p>
           </div>
         </div>                     
@@ -72,10 +73,10 @@ const printPosts = (obPosts) => {
             </div>
           </div>
         </div>
-      
       </div>
       </article>
          `;
+      counter ++
   }
   $(".ContenidoDinamico").html(acc);
 };
@@ -85,7 +86,11 @@ const getAllPostsAjaxjQuery = async () => {
     let Posts = await $.get(
       "https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts.json"
     );
-    printPosts(Posts);
+    let postReverse = {}
+    Object.keys(Posts).reverse().forEach(Post =>{
+      postReverse[[Post]] = Posts[Post]
+    })
+    printPosts(postReverse);
   } catch (error) {
     console.log(error);
   }

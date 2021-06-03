@@ -6,6 +6,7 @@ const printPostFetchjQuery = async () => {
     let Post = await $.get(
       `https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/${idPost}.json`
     );
+    console.log(Post)
     if (Post !== null) {
       let {
         titulo,
