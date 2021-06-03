@@ -3,6 +3,7 @@
 const printPosts = (obPosts) => {
   let acc = "";
   let counter = 1 
+  let asideTags=[]
   for (key in obPosts) {
     let {
       titulo,
@@ -12,15 +13,20 @@ const printPosts = (obPosts) => {
       MinutosDeLectura,
       FechaDeCreacion,
     } = obPosts[key];
+    htmltags = ""
     //Proceso Tags
-    htmltags = "";
+    
     //Cambio de Imagen Dinamico
     // $(".Img-PersonaLogeada").html(`  
     //   <img src="${Usuario.ImagenUsuario}" alt="">`);
     //Pintado de Articulos
+    Tags.split(",").forEach((tag)=>{
+      asideTags.push(`<li><a href="">#${tag}</a></li>`)
+    })
     Tags.split(",").forEach((tag) => {
-      htmltags += `<a href="">#${tag}</a>`;
+      htmltags +=`<li><a href="">#${tag}</a></li>`;
     });
+
     let imgPost = counter == 1 ? `<div class="img-post-center">
     <img
       src="${urlImage}"
@@ -36,14 +42,14 @@ const printPosts = (obPosts) => {
               src="${Usuario.ImagenUsuario}"
               alt="">
           </div>
-          <div class="d-flex flex-column ml-2 ">
+          <div class="d-flex flex-column ml-2 mt-3 ">
             <h3>${Usuario.Nombre}</h3>
             <p>${FechaDeCreacion}</p>
           </div>
         </div>                     
         <h1 class="mt-3 "><a href="/post.html?idpost=${key}" class="pr-4 ml-3 title-post">${titulo}</a></h1>
         <div class="post-bottom">
-          <ul class="ul-post post-tags">
+          <ul class="d-flex ul-post post-tags">
                 ${htmltags}
           </ul>
           <div class="d-flex align-items-center justify-content-between">
@@ -77,7 +83,11 @@ const printPosts = (obPosts) => {
       </article>
          `;
       counter ++
+      
   }
+   const myUniqueArray = [...new Set(asideTags)]
+  // console.log(myUniqueArray)
+   $("#asideTags").html(myUniqueArray);
   $(".ContenidoDinamico").html(acc);
 };
 
