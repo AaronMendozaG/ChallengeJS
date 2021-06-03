@@ -2,20 +2,21 @@ var quill
 
 $(document).ready(function(){
     // console.log('ready')
-    // const params = new URLSearchParams(window.location.search)
-    // let idPost = params.get('idPost')
+    const params = new URLSearchParams(window.location.search)
+    let idPost = params.get('idpost')
 
     
 
     const printPost = async () => {
         try {
-            let post = await $.get(`https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/-Mb9g4fwEq3lvjB_rnJF.json`)
+            let post = await $.get(`https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/${idPost}.json`)
             if (post !== null) {
                 let { ContenidoPost, Tags, titulo, urlImage } = post
                 $('.ql-editor ').html(ContenidoPost)
                 $('#tag').val(Tags)
                 $('#title').text(titulo)
                 $('#urlImg').attr("src",urlImage)
+                $('#imgInput').val(urlImage)
             }
             
         } catch (error) {
@@ -58,17 +59,18 @@ $(document).ready(function(){
         $('#urlImg').attr("src",'http://via.placeholder.com/640x360')
        
     })
+    
     $('.change').click((e)=>{
         
         $('#imgInput').attr('class','tags-edit mt-3').focus()
        
     })
 
-    async function modifyPost (newPost){
+    async function modifyPost (idPost,newPost){
         try {
     
             let post = await $.ajax({
-                url: `https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/-Mb9g4fwEq3lvjB_rnJF.json`,
+                url: `https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/${idPost}.json`,
                 method:'PATCH',
                 data: JSON.stringify(newPost),
                 dataType: '',
@@ -82,6 +84,7 @@ $(document).ready(function(){
                     // console.log(xhr)
                 },
             })
+            console.log(post)
             return post
     
         } catch (error) {
@@ -95,8 +98,8 @@ $(document).ready(function(){
         console.log('me estas presionando')
    let ContenidoPost=$('.ql-editor ').html()
    let Tags=$('#tag').val()
-   let titulo=$('#title').text()
-   let urlImagen=$('#urlImg').attr("src")
+   let titulo=$('.title').val()
+   let urlImage=$('#imgInput').val()
    if (ContenidoPost=='<p> </p>' || Tags == '' || titulo=='') {
        window.alert('Ingresa todos los datos solicitados' )
        return
@@ -105,13 +108,21 @@ $(document).ready(function(){
        ContenidoPost:ContenidoPost, 
        Tags:Tags, 
        titulo:titulo, 
-       urlImagen:urlImagen
+       urlImage:urlImage
    }
 
    //putKoderAjaxJquery(idKoder,newKoder)
-   modifyPost(newPostModify)
+   modifyPost(idPost,newPostModify)
    })
 
+   $('#btnClose').click(function(){
+    alert("You've made changes to your post. Do you want to navigate to leave this page?")
+    window.location.pathname = "/"
+})
+
+$('#discardChanges').click(function(){
+    window.location.pathname = `/post.html`
+})
     
     
     

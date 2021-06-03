@@ -6,10 +6,11 @@ div.text-manage{
 
 div.manage-center{
     position: absolute;
-    top:50vh;
-    left: 50vh;
+    top: 100%;
+    left: 50%;
     border-radius: 8px;
     background-color: white;
+    transform: translate(-50%,-50%);
     #title{
         font-size: 30px;
         color:#002380;
