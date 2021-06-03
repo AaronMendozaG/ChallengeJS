@@ -153,4 +153,5 @@ const getAllPostsAjaxjQuery = async () => {
 
 $(() => {
   getAllPostsAjaxjQuery();
+
 });

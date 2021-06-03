@@ -19,43 +19,50 @@ div.manage-center{
 
 div.text{
     color: white;
-    font-size: 18px;
-    padding-left: 27vh;
-    padding-right: 27vh;
+    font-size: 11px;
+    padding-left: 20px;
+    padding-right: 20px;
     h6{
-        font-size: 28px;
+        font-size: 15px;
         font-weight: bold;
     }
     a{
-        font-size: 18px;
+        font-size: 10px;
         color: white;
     }
     p{
-        font-size: 18px;
+        font-size: 12px;
         color: white;
     }
 }
 div.manage-bottom{
-    height: 40vh;
+    height: 20vh;
+    padding: 0;
 }
 .level{
     background-color: black;
     border:solid 1px white;
     border-radius: 8px;
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
     margin-left: 5px;
     text-align: center;
     p{
-        margin-top: 7px;
+        font-size: 10px;
         text-align: center;
         color: white;
     }
 }
 .container-levels{
-    margin-top: 10%;
+    margin-top: 40%;
     background-color: white;
     border-radius: 8px;
+     h5{
+         font-size: 15px;
+     }
+     p{
+         font-size: 10px;
+     }
     .levels{
         .green-level{
             padding-right: 3px;
@@ -88,5 +95,168 @@ div.manage-bottom{
             border-radius: 8px;
         
     }
+    }
+}
+
+@media  screen and (min-width:768px) {
+    div.text{
+        color: white;
+        font-size: 15px;
+        padding-left: 10vh;
+        padding-right: 10vh;
+        h6{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        a{
+            font-size: 15px;
+            color: white;
+        }
+        p{
+            font-size: 15px;
+            color: white;
+        }
+    }
+    .level{
+        background-color: black;
+        border:solid 1px white;
+        border-radius: 8px;
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+        text-align: center;
+        p{  
+            font-size: 18px;
+            margin-top: 7px;
+            text-align: center;
+            color: white;
+        }
+    }
+    div.manage-bottom{
+        height: 30vh;
+    }
+    .level{
+        background-color: black;
+        border:solid 1px white;
+        border-radius: 8px;
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+        text-align: center;
+        p{
+            margin-top: 7px;
+            text-align: center;
+            color: white;
+        }
+    }
+    .container-levels{
+        margin-top: 20%;
+        background-color: white;
+        border-radius: 8px;
+        h5{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        }
+        .levels{
+            .green-level{
+                padding-right: 3px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                
+                background-color: #99ece3;
+                border-radius: 8px;
+                margin-right: 5px;
+            }
+    
+            .gray-level{
+                
+                    padding-right: 3px;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    
+                    background-color: #e9ecff;
+                    border-radius: 8px;
+                    margin-right: 5px;
+                
+            }
+            .blue-level{
+                
+                padding-right: 3px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                
+                background-color: #618cff;
+                border-radius: 8px;
+            
+        }
+        }
+    }
+}
+
+@media  screen and (min-width:1024px){
+    div.manage-bottom{
+        height: 20vh;
+    }
+    div.text{
+        color: white;
+        font-size: 15px;
+        padding-left: 22vh;
+        padding-right: 22vh;
+        h6{
+            font-size: 28px;
+            font-weight: bold;
+        }
+        a{
+            font-size: 18px;
+            color: white;
+        }
+        p{
+            font-size: 18px;
+            color: white;
+        }
+    }
+    div.manage-bottom{
+        height: 30vh;
+    }
+    
+    .container-levels{
+        margin-top: 20%;
+        
+        
+    }
+}
+
+@media  screen and (min-width:1920px){
+    div.manage-bottom{
+        height: 20vh;
+    }
+    div.text{
+        color: white;
+        font-size: 18px;
+        padding-left: 27vh;
+        padding-right: 27vh;
+        h6{
+            font-size: 28px;
+            font-weight: bold;
+        }
+        a{
+            font-size: 18px;
+            color: white;
+        }
+        p{
+            font-size: 18px;
+            color: white;
+        }
+    }
+    div.manage-bottom{
+        height: 30vh;
+    }
+    
+    .container-levels{
+        margin-top: 10%;
+        
+        
     }
 }
