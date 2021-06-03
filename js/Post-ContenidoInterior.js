@@ -6,13 +6,14 @@ const printPostFetchjQuery = async () => {
     let Post = await $.get(
       `https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts/${idPost}.json`
     );
+    console.log(Post)
     if (Post !== null) {
       let {
         titulo,
         Tags,
         urlImage,
         Usuario: { Nombre, ImagenUsuario },
-        minutosDeLectura,
+        MinutosDeLectura,
         FechaDeCreacion,
         ContenidoPost,
       } = Post;
@@ -29,7 +30,7 @@ const printPostFetchjQuery = async () => {
       <img src="${ImagenUsuario}" alt="">`);
       $(".post-article .contenido-Post .Usuario-Nombre").html(`${Nombre}`);
       $(".post-article .contenido-Post .Fecha-Creacion").html(
-        `${FechaDeCreacion}. Originally published at <a href="">the${Nombre}agi.com</a>・${minutosDeLectura} min read`
+        `${FechaDeCreacion}. Originally published at <a href="">the${Nombre}agi.com</a>・${MinutosDeLectura} min read`
       );
       $(".post-article .contenido-Post .informacion").html(
         `— ${Nombre}💻🎧💪 (@The${Nombre}) <a href="">${FechaDeCreacion}, 2021</a> `
