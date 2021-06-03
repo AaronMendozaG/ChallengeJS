@@ -78,7 +78,7 @@ const printPosts = (obPosts, bandera = 0) => {
     counter++;
   }
   if (bandera === 1) {
-    console.log("Hola estoy entrando a if bandera");
+    // console.log("Hola estoy entrando a if bandera");
     $(".ConcatenadoPostScroll").html(acc);
   } else {
     $(".ContenidoDinamico").html(acc);
@@ -141,7 +141,7 @@ const getAllPostsAjaxjQuery = async () => {
         $(document).height() - $(window).height() - 10
       ) {
         $(".ContenidoDinamico").append(
-          '<div class="ConcatenadoPostScroll">AQUI ESTOY</div>'
+          '<div class="ConcatenadoPostScroll"></div>'
         );
         printPosts(postRestantes, 1);
       }
