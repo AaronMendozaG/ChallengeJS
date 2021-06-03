@@ -84,6 +84,7 @@ const printPosts = (obPosts) => {
       counter ++
   }
   const myUniqueArray = [...new Set(asideTags)]
+  //PINTADO DE My Tags
   $("#asideTags").html(myUniqueArray);
   $(".ContenidoDinamico").html(acc);
 };
