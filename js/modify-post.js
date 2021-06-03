@@ -76,6 +76,7 @@ $(document).ready(function(){
                 dataType: '',
                 success: function() {
                     window.alert('POST MODIFICADO CON EXITO')
+                    window.location.pathname = "/"
                 },
                 error: function(xhr){
                     console.log(xhr)
@@ -113,7 +114,7 @@ $(document).ready(function(){
 
    //putKoderAjaxJquery(idKoder,newKoder)
    modifyPost(idPost,newPostModify)
-   window.location.pathname = "/"
+   
    })
 
    $('#btnClose').click(function(){
@@ -125,8 +126,9 @@ $('#discardChanges').click(function(){
     window.location.pathname = `/post.html`
 })
     
-    
+
 $('#tag').click(()=>{
+    $('#infoArea').html('<p> <strong> </> Agrega tus Tags</strong> <br> Las etiquetas ayudan a las personas a encontrar tu publicación. Piense en las etiquetas como los temas o categorías que mejor describen su publicación.</p>')
     $('#tag').tagsInput({
         minChars: 0,
         maxChars: null,
@@ -134,7 +136,9 @@ $('#tag').click(()=>{
         validationPattern: null,
         unique: true
     })
+    
 })
+
 
 $('#imgInput').click(function(){
     $('#infoArea').html('<p> <strong> </> Imagen del Post</strong> <br> La imagen del Post se mostrara a los Usuarios, piensa en una imagen que describa tu Post.</p>')
