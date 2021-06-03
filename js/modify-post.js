@@ -115,6 +115,14 @@ $(document).ready(function(){
    modifyPost(idPost,newPostModify)
    })
 
+   $('#tag').tagsInput({
+    minChars: 0,
+    maxChars: null,
+    limit: null,
+    validationPattern: null,
+    unique: true
+})
+
    $('#btnClose').click(function(){
     alert("You've made changes to your post. Do you want to navigate to leave this page?")
     window.location.pathname = "/"
@@ -126,8 +134,4 @@ $('#discardChanges').click(function(){
     
     
     
-
-    
-
-
 })
