@@ -1,37 +1,30 @@
 ////////////////////////////HOME
 
-const printPosts = (obPosts) => {
+const printPosts = (obPosts, bandera = 0) => {
   let acc = "";
-  let counter = 1 
-  let asideTags=[]
+  let counter = 1;
+  let asideTags = [];
   for (key in obPosts) {
-    let {
-      titulo,
-      Tags,
-      urlImage,
-      Usuario,
-      MinutosDeLectura,
-      FechaDeCreacion,
-    } = obPosts[key];
-    htmltags = ""
+    let { titulo, Tags, urlImage, Usuario, MinutosDeLectura, FechaDeCreacion } =
+      obPosts[key];
+    htmltags = "";
     //Proceso Tags
-    
-    //Cambio de Imagen Dinamico
-    // $(".Img-PersonaLogeada").html(`  
-    //   <img src="${Usuario.ImagenUsuario}" alt="">`);
-    //Pintado de Articulos
-    Tags.split(",").forEach((tag)=>{
-      asideTags.push(`<li><a href="">#${tag}</a></li>`)
-    })
     Tags.split(",").forEach((tag) => {
-      htmltags +=`<li><a href="">#${tag}</a></li>`;
+      asideTags.push(`<li><a href="">#${tag}</a></li>`);
     });
-
-    let imgPost = counter == 1 ? `<div class="img-post-center">
+    Tags.split(",").forEach((tag) => {
+      htmltags += `<li><a href="">#${tag}</a></li>`;
+    });
+    //If para imagen en la primera
+    let imgPost =
+      counter == 1
+        ? `<div class="img-post-center">
     <img
       src="${urlImage}"
       alt="">
-  </div>` : ''
+  </div>`
+        : "";
+    //Template Dinamico
     acc += `
       <article class="mt-2 mt-md-3 card-center-principal">
       ${imgPost}
@@ -74,7 +67,7 @@ const printPosts = (obPosts) => {
               <p class="d-none d-md-block d-lg-block ml-1">comment</p>
             </div>
             <div class="d-flex align-items-center">
-              <small>${(MinutosDeLectura)} min read</small>
+              <small>${MinutosDeLectura} min read</small>
               <button class="ml-2 post-button">Save</button>
             </div>
           </div>
@@ -82,25 +75,77 @@ const printPosts = (obPosts) => {
       </div>
       </article>
          `;
-      counter ++
-      
+    counter++;
   }
-   const myUniqueArray = [...new Set(asideTags)]
+  if (bandera === 1) {
+    console.log("Hola estoy entrando a if bandera");
+    $(".ConcatenadoPostScroll").html(acc);
+  } else {
+    $(".ContenidoDinamico").html(acc);
+  }
+  const myUniqueArray = [...new Set(asideTags)];
   // console.log(myUniqueArray)
-   $("#asideTags").html(myUniqueArray);
-  $(".ContenidoDinamico").html(acc);
+  $("#asideTags").html(myUniqueArray);
 };
+
+// const getAllPostsAjaxjQuery = async () => {
+//   try {
+//     let Posts = await $.get(
+//       "https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts.json"
+//     );
+//     let postReverse = {};
+//     Object.keys(Posts)
+//       .reverse()
+//       .forEach((Post) => {
+//         postReverse[[Post]] = Posts[Post];
+//       });
+
+//     printPosts(postReverse);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
 const getAllPostsAjaxjQuery = async () => {
   try {
     let Posts = await $.get(
       "https://desafiojs-vic-carlos-aaron-default-rtdb.firebaseio.com/Posts.json"
     );
-    let postReverse = {}
-    Object.keys(Posts).reverse().forEach(Post =>{
-      postReverse[[Post]] = Posts[Post]
-    })
-    printPosts(postReverse);
+    // let postReverse = {};
+    let postiniciales = {};
+    let postRestantes = {};
+    //Iniciales
+    Object.keys(Posts)
+      .reverse()
+      .slice(0, 6)
+      .forEach((elem) => {
+        postiniciales[[elem]] = Posts[elem];
+        // console.log("Dentro del Foreach valor traido num ", Posts[elem]);
+        // console.log("Dentro del Foreach valor guardado", postiniciales[elem]);
+      });
+    // console.log("Todos", Posts);
+    // console.log("Iniciales", postiniciales);
+    printPosts(postiniciales);
+    //Restantes
+    Object.keys(Posts)
+      .reverse()
+      .slice(3, 6)
+      .forEach((Post) => {
+        postRestantes[[Post]] = Posts[Post];
+      });
+    // console.log("Restantes:", postRestantes);
+    // If Scroll
+    $(window).scroll(function () {
+      if (
+        $(window).scrollTop() >=
+        $(document).height() - $(window).height() - 10
+      ) {
+        $(".ContenidoDinamico").append(
+          '<div class="ConcatenadoPostScroll">AQUI ESTOY</div>'
+        );
+        printPosts(postRestantes, 1);
+      }
+    });
   } catch (error) {
     console.log(error);
   }
