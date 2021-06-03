@@ -98,4 +98,5 @@ const getAllPostsAjaxjQuery = async () => {
 
 $(() => {
   getAllPostsAjaxjQuery();
+
 });
