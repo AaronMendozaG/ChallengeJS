@@ -74,6 +74,7 @@ $(document).ready(function(){
                 dataType: '',
                 success: function() {
                     window.alert('POST MODIFICADO CON EXITO')
+                    window.location.pathname = "/"
                 },
                 error: function(xhr){
                     console.log(xhr)
@@ -115,13 +116,13 @@ $(document).ready(function(){
 
    
     //TAGS
-   $('#tag').tagsInput({
-        minChars: 0,
-        maxChars: null,
-        limit: null,
-        validationPattern: null,
-        unique: true
-    })
+//    $('#tag').tagsInput({
+//         minChars: 0,
+//         maxChars: null,
+//         limit: null,
+//         validationPattern: null,
+//         unique: true
+//     })
 
     //BOTON DE CERRAR REGRESA A HOME
    $('#btnClose').click(function(){
@@ -134,6 +135,33 @@ $(document).ready(function(){
         window.location.pathname = `/post.html`
     })
     
+
+$('#tag').click(()=>{
+    $('#infoArea').html('<p> <strong> </> Agrega tus Tags</strong> <br> Las etiquetas ayudan a las personas a encontrar tu publicación. Piense en las etiquetas como los temas o categorías que mejor describen su publicación.</p>')
+    $('#tag').tagsInput({
+        minChars: 0,
+        maxChars: null,
+        limit: null,
+        validationPattern: null,
+        unique: true
+    })
     
-    
+})
+
+
+$('#imgInput').click(function(){
+    $('#infoArea').html('<p> <strong> </> Imagen del Post</strong> <br> La imagen del Post se mostrara a los Usuarios, piensa en una imagen que describa tu Post.</p>')
+})
+
+
+$('#title').click(function(){
+    $('#infoArea').html(
+        '<strong> </> Escribe un Gran Titulo</strong> <br> Piense en el título de su publicación como una descripción súper corta ¡pero convincente!. Utilice palabras clave cuando sea apropiado para ayudar a garantizar que las personas puedan encontrar su publicación mediante la búsqueda.</p>')
+})
+
+$('#editor').click(function(){
+    $('#infoArea').html(
+        '<strong> </> Editor Basico</strong> <br> Use Markdown para escribir y dar formato a las publicaciones. Puede usar etiquetas Liquid para agregar contenido enriquecido como tweets, videos de YouTube, etc. Además de las imágenes del contenido de la publicación, también puede arrastrar y soltar una imagen de portada.</p>')
+})
+
 })
