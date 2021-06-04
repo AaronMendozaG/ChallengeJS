@@ -117,6 +117,7 @@ $(document).ready(function(){
    
    })
 
+
    $('#btnClose').click(function(){
     alert("You've made changes to your post. Do you want to navigate to leave this page?")
     window.location.pathname = "/"
